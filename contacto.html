@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - Escapes Keno</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f5f5f5;
+            font-family: 'Roboto', sans-serif;
+        }
+        .navbar, footer {
+            background-color: black;
+            color: white;
+        }
+        .navbar-brand, .navbar-nav .nav-link {
+            color: white;
+        }
+        .footer-content {
+            color: white;
+        }
+        .contact-section {
+            background-color: white;
+            padding: 20px;
+            border-radius: 5px;
+            margin-top: 20px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .contact-section h2 {
+            color: #E5252E;
+        }
+        .contact-info {
+            background-color: #f8f9fa;
+            padding: 20px;
+            border-radius: 5px;
+        }
+        .contact-info p {
+            font-size: 1.2em;
+        }
+        .contact-info a {
+            font-size: 1.5em;
+            font-weight: bold;
+            display: inline-block;
+            margin-top: 10px;
+            color: #E5252E;
+        }
+        .filler-text {
+            color: #6c757d;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg">
+        <a class="navbar-brand" href="index.html">
+            <img src="logo.png" width="30" height="30" class="d-inline-block align-top" alt="Logo">
+            Escapes Keno
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Inicio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Servicios</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="contacto.html">Contacto <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Sobre Nosotros</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="contact-info mt-5 text-center">
+            <h2>Contáctanos</h2>
+            <p>Puedes llamarnos al <a href="tel:+56941641458" id="phone-number">+56 9 4164 1458</a> para cualquier consulta o información sobre nuestros servicios.</p>
+            <button class="btn btn-outline-dark" onclick="copyToClipboard('#phone-number')">Copiar número</button>
+        </div>
+
+        <div class="contact-section mt-3">
+            <h2>Más Información</h2>
+            <p class="filler-text">En Escapes Keno, nos especializamos en la reparación y mantenimiento de sistemas de escape. Nuestro equipo de expertos está siempre listo para ofrecerte soluciones rápidas y efectivas. No dudes en visitarnos en nuestra ubicación o en llamarnos para una atención más personalizada.</p>
+            <p class="filler-text">Nuestra dirección es Av. Centenario N° 437 - San Antonio. Te esperamos con los mejores servicios y la atención que mereces.</p>
+        </div>  
+
+        <div class="contact-section mt-3">
+            <h2>Horario de Atención</h2>
+            <p class="filler-text">Lunes a Viernes: 9:00 AM - 6:00 PM</p>
+            <p class="filler-text">Sábado: 9:00 AM - 2:00 PM</p>
+            <p class="filler-text">Domingo: Cerrado</p>
+        </div>
+    </div>
+
+    <footer class="text-center mt-5">
+        <div class="container">
+            <div class="row footer-content">
+                <div class="col-md-4">
+                    <h5>Contacto</h5>
+                    <p>Email: contacto@escapeskeno.com</p>
+                    <p>Teléfono: +56 9 4164 1458</p>
+                </div>
+                <div class="col-md-4">
+                    <h5>Ubicación</h5>
+                    <p>Av. Centenario N° 437 - San Antonio</p>
+                    <a href="https://maps.app.goo.gl/PCLav3zKaqsNFGWW6" class="text-white">Encontrar en el mapa</a>
+                </div>
+                <div class="col-md-4">
+                    <h5>Síguenos</h5>
+                    <a href="https://www.facebook.com/eugenio.echeverria.5095?mibextid=LQQJ4d" class="text-white">Facebook</a>
+                </div>
+            </div>
+            <div class="row mt-3">
+                <div class="col">
+                    <p>&copy; 2024 Escapes Keno. Todos los derechos reservados.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        function copyToClipboard(element) {
+            var $temp = $("<input>");
+            $("body").append($temp);
+            $temp.val($(element).text()).select();
+            document.execCommand("copy");
+            $temp.remove();
+            alert("Número de teléfono copiado: " + $(element).text());
+        }
+    </script>
+</body>
+</html>

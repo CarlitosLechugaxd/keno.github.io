@@ -5,9 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Escapes Keno</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <style>
         body {
-            background-color: #E5252E;
+            background-color: #f5f5f5;
+            font-family: 'Roboto', sans-serif;
         }
         .navbar, footer {
             background-color: black;
@@ -16,9 +18,9 @@
         .navbar-brand, .navbar-nav .nav-link {
             color: white;
         }
-        .jumbotron {
-            background-color: black;
-            color: white;
+        .navbar-brand img {
+            max-width: 40px;
+            margin-right: 10px;
         }
         .carousel-inner img {
             height: 400px;
@@ -27,32 +29,59 @@
         .footer-content {
             color: white;
         }
+        .jumbotron {
+            background-color: black;
+            color: white;
+            border-radius: 10px;
+            padding: 40px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .jumbotron .btn-light {
+            border-color: #E5252E;
+            color: #E5252E;
+        }
+        .jumbotron .btn-light:hover {
+            background-color: #E5252E;
+            color: white;
+        }
+        footer {
+            padding: 40px 0;
+        }
+        footer a {
+            color: #ffffff;
+            text-decoration: none;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
     </style>
 </head>
 <body>
     <nav class="navbar navbar-expand-lg">
-        <a class="navbar-brand" href="#">
-            <img src="logo.png" width="30" height="30" class="d-inline-block align-top" alt="Logo">
-            Escapes Keno
-        </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="#">Inicio <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Servicios</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Contacto</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Sobre Nosotros</a>
-                </li>
-            </ul>
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="logo.png" alt="Logo">
+                Escapes Keno
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Inicio <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Servicios</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contacto.html">Contacto</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Sobre Nosotros</a>
+                    </li>
+                </ul>
+            </div>
         </div>
     </nav>
     
@@ -73,15 +102,15 @@
             <div class="carousel-item">
                 <img src="img2.jpeg" class="d-block w-100" alt="Imagen 2">
                 <div class="carousel-caption d-none d-md-block">
-                    <h5>Instalación de Nuevos Sistemas</h5>
-                    <p>Instalamos sistemas de escape nuevos y mejorados.</p>
+                    <h5>Empresa Familiar</h5>
+                    <p>Trabajamos con toda la honestidad de una familia.</p>
                 </div>
             </div>
             <div class="carousel-item">
                 <img src="img3.jpeg" class="d-block w-100" alt="Imagen 3">
                 <div class="carousel-caption d-none d-md-block">
-                    <h5>Diagnóstico y Soluciones</h5>
-                    <p>Ofrecemos diagnósticos completos y soluciones efectivas.</p>
+                    <h5>Instalación de Nuevos Sistemas</h5>
+                    <p>Instalamos sistemas de escape nuevos y mejorados.</p>
                 </div>
             </div>
         </div>
@@ -96,12 +125,12 @@
     </div>
 
     <div class="container mt-5">
-        <div class="jumbotron">
+        <div class="jumbotron text-center">
             <h1 class="display-4">¡Bienvenido a Escapes Keno!</h1>
             <p class="lead">Somos expertos en sistemas de escape, ofreciendo soluciones rápidas y efectivas para tu vehículo.</p>
             <hr class="my-4">
             <p>Contáctanos para más información y descubre nuestros servicios especializados.</p>
-            <a class="btn btn-light btn-lg" href="#" role="button">Contáctanos</a>
+            <a class="btn btn-light btn-lg" href="contacto.html" role="button">Contáctanos</a>
         </div>
     </div>
 
@@ -111,17 +140,16 @@
                 <div class="col-md-4">
                     <h5>Contacto</h5>
                     <p>Email: contacto@escapeskeno.com</p>
-                    <p>Teléfono: +56941641458</p>
+                    <p>Teléfono: +56 9 41641458</p>
                 </div>
                 <div class="col-md-4">
                     <h5>Ubicación</h5>
                     <p>Av. Centenario N° 437 - San Antonio</p>
+                    <a href="https://maps.app.goo.gl/PCLav3zKaqsNFGWW6">Encontrar en el mapa</a>
                 </div>
                 <div class="col-md-4">
                     <h5>Síguenos</h5>
-                    <a href="#" class="text-white">Facebook</a> |
-                    <a href="#" class="text-white">Twitter</a> |
-                    <a href="#" class="text-white">Instagram</a>
+                    <a href="https://www.facebook.com/eugenio.echeverria.5095?mibextid=LQQJ4d">Facebook</a>
                 </div>
             </div>
             <div class="row mt-3">
